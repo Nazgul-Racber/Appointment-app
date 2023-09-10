@@ -12,8 +12,12 @@ const Doctors = () => {
       </h3>
       
       <Row>
-        {doctorData.map((item) => (
-        <Col></Col>
+        {doctorData.map(({ id, img, dep, name}) => (
+          <Col xs={12} sm={6} md={4} lg={3}>
+            <img src={img} alt={name} className="img-thumbnail" />
+            <h5>{name}</h5>
+            <h6>{dep}</h6>
+          </Col>
       ))}
       </Row>
 
