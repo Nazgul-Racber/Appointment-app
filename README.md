@@ -7,4 +7,3 @@
 
 ![Appointment-App]()
 
-## Demo
