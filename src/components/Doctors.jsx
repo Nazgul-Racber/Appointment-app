@@ -3,12 +3,16 @@ import { doctorData } from "../helper/data";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import AddModal from "./AddModal";
+import { useState } from "react";
 
 const Doctors = () => {
-  console.log(doctorData);
+  const [show, setShow] = useState(false);
+
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
   const handleImgClick = () => {
-    
+    setShow(true)
   }
   return (
     <Container className="p-2">
@@ -29,7 +33,7 @@ const Doctors = () => {
           </Col>
         ))}
       </Row>
-      <AddModal />
+      <AddModal show={show} handleClose={() => setShow(false)}/>
     </Container>
   );
 };
