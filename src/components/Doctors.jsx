@@ -11,9 +11,9 @@ const Doctors = () => {
   // const handleClose = () => setShow(false);
   // const handleShow = () => setShow(true);
 
-  const handleImgClick = () => {
-    setShow(true)
-  }
+  // const handleImgClick = () => {
+  //   setShow(true)
+  // }
   return (
     <Container className="p-2">
       <h3 className="display-6 mb-3" style={{ color: "rgb(8, 162, 168)" }}>
@@ -27,7 +27,7 @@ const Doctors = () => {
               src={img}
               alt={name}
               className="img-thumbnail doctor-img"
-              onClick={handleImgClick}/>
+              onClick={()=> setShow(true)}/>
             <h5>{name}</h5>
             <h6>{dep}</h6>
           </Col>
