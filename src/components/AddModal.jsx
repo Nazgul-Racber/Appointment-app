@@ -19,7 +19,7 @@ function AddModal({ show, handleClose, apps, setApps, drName }) {
         doctor: drName,
       },
     ]);
-
+    setName("")
     handleClose();
   };
   return (
