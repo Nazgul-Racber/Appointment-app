@@ -4,8 +4,12 @@ import Col from "react-bootstrap/Col";
 import { TiDelete } from "react-icons/ti";
 
 
-const AppointmentList = ({ apps }) => {
+const AppointmentList = ({ apps, setApps }) => {
   console.log(apps);
+
+  const handleDelete = (id) => {
+    setApps()
+  }
   return (
     <Container className="p-2">
       <h3 className="display-6 mb-2" style={{ color: "rgb(180, 24, 204)" }}>
@@ -25,7 +29,11 @@ const AppointmentList = ({ apps }) => {
               <h5>{day}</h5>
             </Col>
             <Col className="text-end">
-              <TiDelete className="text-danger fs-1" />
+              <TiDelete
+                className="text-danger fs-1"
+                type="button"
+                onClick={() => handleDelete(id)}
+              />
             </Col>
           </Row>
         </div>
