@@ -10,6 +10,10 @@ const AppointmentList = ({ apps, setApps }) => {
   const handleDelete = (id) => {
     setApps(apps.filter((item) => item.id !== id))
   }
+
+  const handleDoubleClick = () => {
+    
+  }
   return (
     <Container className="p-2">
       <h3 className="display-6 mb-2" style={{ color: "rgb(180, 24, 204)" }}>
@@ -21,6 +25,7 @@ const AppointmentList = ({ apps, setApps }) => {
         <div
           key={id}
           className={consulted ? "appointments consulted" : "appointments"}
+          onDoubleClick={handleDoubleClick}
         >
           <Row className="justify-content-between align-items-center">
             <Col>
