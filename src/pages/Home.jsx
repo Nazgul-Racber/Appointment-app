@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <main className="text-center mt-2">
       <h1 className="display-5 text-danger">HOSPITAL</h1>
-      <Doctors apps={appointments} set={setAppointments} />
+      <Doctors apps={appointments} setApps={setAppointments} />
       <AppointmentList apps={appointments} />
     </main>
   )
